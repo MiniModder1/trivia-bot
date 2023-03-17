@@ -213,9 +213,11 @@ local Button2 = Tab:CreateButton({
 	end,
 })
 
-local Button3 = Tab1:CreateButton({
-	Name = "Randomize the Question",
+local Button3 = Tab:CreateButton({
+	Name = "Load the Question...",
 	Callback = function()
+	    Button:Set("Load a Different Question.")
+	
 	    local keys = {}
 	    local values = {}
         for k, v in pairs(trivia) do
