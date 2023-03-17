@@ -182,7 +182,7 @@ local Button = Tab:CreateButton({
     		    i = i-1
     		    task.wait(1)
     		end
-    		game:GetService("ReplicatedStorage").CustomiseBooth:FireServer("Update",{["DescriptionText"] = "TIMES UP!",["ImageId"] = 0})
+    		game:GetService("ReplicatedStorage").CustomiseBooth:FireServer("Update",{["DescriptionText"] = "Times up or Someone Guessed Correctly!",["ImageId"] = 0})
     		task.wait(3)
     		game:GetService("ReplicatedStorage").CustomiseBooth:FireServer("Update",{["DescriptionText"] = string.format("The answer was: %s", an),["ImageId"] = 9649923610})
     		task.wait(3)
@@ -197,7 +197,7 @@ local Button = Tab:CreateButton({
     		    task.wait(1)
     		end
     		if run == true then
-        		game:GetService("ReplicatedStorage").CustomiseBooth:FireServer("Update",{["DescriptionText"] = "TIMES UP!",["ImageId"] = 0})
+        		game:GetService("ReplicatedStorage").CustomiseBooth:FireServer("Update",{["DescriptionText"] = "Times up or Someone Guessed Correctly!",["ImageId"] = 0})
         		task.wait(3)
         		game:GetService("ReplicatedStorage").CustomiseBooth:FireServer("Update",{["DescriptionText"] = "Please wait for the host to ask another question.",["ImageId"] = 11891088780})
         		run = false
@@ -216,7 +216,7 @@ local Button2 = Tab:CreateButton({
 local Button3 = Tab:CreateButton({
 	Name = "Load the Question...",
 	Callback = function()
-	    Button:Set("Load a Different Question.")
+	    Button3:Set("Load a Different Question.")
 	
 	    local keys = {}
 	    local values = {}
